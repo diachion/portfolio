@@ -1,0 +1,9 @@
+.nectar-fancy-ul ul li {
+    padding-left: 0 !important;
+    a {
+        color: $light_purple !important;
+        &:hover {
+            color: #fff !important;
+        }
+    }
+}

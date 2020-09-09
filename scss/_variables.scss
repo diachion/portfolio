@@ -1,0 +1,65 @@
+/*
+    Global Variables
+*/
+
+
+// Colors
+$green: #16a890;
+$lime: #e2f4b0;
+$red: #AD343E;
+$offwhite-red: #F1E4E8;
+$purple: #542F84;
+$dark_purple: #4365C2;
+$light_purple: #DBCCEE;
+$shadow_purple: #0A369D;
+
+$offwhite-green: #d7f4e0;
+
+$black: #26282D;
+$dark_gray: #4E5872;
+$light_gray: #C4C4C4;
+
+// Typography
+$heading: $black;
+$body: $dark_gray;
+$link: $purple;
+
+$muli: 'Muli', 'Open Sans', 'Helvetica';
+
+$heavy: 700;
+$medium: 500;
+$normal: 400;
+$light: 300;
+
+// Transitions
+$easyease: all .3s ease;
+
+
+// Shadows
+$dark_shadow: 0 24px 34px transparentize($shadow_purple,.88);
+$light_shadow: 0 24px 34px transparentize($shadow_purple,.94);
+$btn_shadow: 0 2px 6px transparentize($shadow_purple,.9);
+
+// Borders
+$border-radius: 8px;
+
+// Spacing
+$gutter: 15px;
+$gutter-large: $gutter*1.75;
+
+/* MIXINS */
+@mixin size($size) {
+    @if $size == phone {
+      @media (max-width: 599px) { @content; }
+    } @else if $size == tablet {
+      @media (max-width: 1000px) { @content; }
+    } @else if $size == desktop {
+      @media (min-width: 1001px) { @content; }
+    }
+}
+   
+.reverse-row >.col.span_12 {        
+    @include size(desktop) {
+        flex-direction: row-reverse !important;  
+    }
+}
