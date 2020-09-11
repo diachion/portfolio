@@ -1,0 +1,45 @@
+.dev-design {
+	strong, b, h2 {
+		color: $red;
+	}
+	a {
+		color: $red;
+		&:hover {
+				color: $offwhite-red;
+		}
+	}
+	.project-divider {
+		width: 50px;
+		height: 5px;
+		margin: 0 auto;
+		background-color: $red;
+	}
+}
+
+.graphic-design {
+	strong, b, h2 {
+		color: $purple;
+	}
+	a {
+		color: $purple;
+		&:hover {
+			color: $light_purple;
+		}
+	}
+	.project-divider {
+		width: 50px;
+		height: 5px;
+		margin: 0 auto;
+		background-color: $purple;
+	}
+}
+
+.project-divider-wrap {
+  padding-bottom: 3%;
+}
+
+.project-content {
+	p {
+		font-size: 18px;
+	}
+}
