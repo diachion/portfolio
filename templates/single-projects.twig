@@ -1,21 +1,15 @@
-{# <div class="container main-content">
-<div class="row">
-    <div class="row-bg-wrap">
-        <div class="inner-wrap using-image">
-        <div class="row-bg" style="background-image: url({{ Image(projects.meta('header')).src }}); background-position: left top; background-repeat: no-repeat;"/>
-
-        </div>
-        </div>
-    </div> 
-</div>
-</div> #}
-
 <div class="container main-content">
+<div class="row">
+	<div class="{{projects.color}} header-wrapper">
+		<div class="bg-image" style="background-image: url({{ Image(projects.meta('header')).src }});"/></div>
+	</div>
+</div>
+
 	<div class="row">
 		<div class="{{projects.color}} row_col_wrap_12 col span_12 center">
 			<h2>{{projects.title}}</h2>
-			<p><em>{{projects.date_started}}</em></p>
-			<h3>{{projects.project_types}}</h3>
+			<p>{{projects.date_started}}</p>
+			<h3>{{projects.categorie}}</h3>
 			<p><a href="{{projects.site_url}}" target="new">{{projects.website_display}}</a></p>
 			<p><strong>Tools Used</strong>: {{projects.tools_used | join(', ')}}</p>
 
@@ -28,7 +22,10 @@
 				<p>{{projects.your_story}}</p>
 			</div>
 		</div>
+
 	</div>
+	{# row #}
 </div>
+{# container #}
 
 

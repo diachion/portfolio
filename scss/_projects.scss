@@ -1,3 +1,4 @@
+// ============ DESIGN & DEVELOPMENT - RED ============
 .dev-design {
 	strong, b, h2 {
 		color: $red;
@@ -14,8 +15,17 @@
 		margin: 0 auto;
 		background-color: $red;
 	}
+	.bg-image {
+		border: 10px solid $offwhite-red;
+		background-position: left top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 50vh;
+		width: 100%;
+	}
 }
 
+// ============ GRAPHIC DESIGN - PURPLE ============
 .graphic-design {
 	strong, b, h2 {
 		color: $purple;
@@ -32,8 +42,17 @@
 		margin: 0 auto;
 		background-color: $purple;
 	}
+	.bg-image {
+		border: 10px solid $light_purple;
+		background-position: left top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 50vh;
+		width: 100%;
+	}
 }
 
+// ============ MISC FOR THE WHOLE THEME ============
 .project-divider-wrap {
   padding-bottom: 3%;
 }
@@ -42,4 +61,8 @@
 	p {
 		font-size: 18px;
 	}
+}
+
+.header-wrapper {
+	padding: 25px 0;
 }
