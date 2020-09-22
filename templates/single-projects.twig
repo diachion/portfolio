@@ -1,31 +1,42 @@
 <div class="container main-content">
-<div class="row">
+{# <div class="row">
 	<div class="{{projects.color}} header-wrapper">
-		<div class="bg-image" style="background-image: url({{ Image(projects.meta('header')).src }});"/></div>
+		<div class="bg-image" style="background-image: url({{ Image(projects.meta('header')).src }});"></div>
 	</div>
-</div>
+</div> #}
 
 	<div class="row">
-		<div class="{{projects.color}} row_col_wrap_12 col span_12 center">
+		<div class="{{projects.color}} row_col_wrap_12 col span_12 center" style="margin-top: 50px;">
 			<h2>{{projects.title}}</h2>
 			<p>{{projects.date_started}}</p>
 			<h3>{{projects.categorie}}</h3>
-			<p><a href="{{projects.site_url}}" target="new">{{projects.website_display}}</a></p>
-			<p><strong>Tools Used</strong>: {{projects.tools_used | join(', ')}}</p>
+			<p><strong>Tools Used</strong>: {{projects.terms('tools')|join(', ')}}</p>
 
 			<div class="project-divider-wrap">
 				<div class="project-divider"></div>
 			</div>
+				
+			<div class="{{projects.color}} header-wrapper">
+				<div class="bg-image" style="background-image: url({{ Image(projects.meta('header')).src }});"></div>
+			</div>
+
+			<a class="btn" href="{{projects.site_url}}" target="new">{{projects.website_display}}</a>
 
 			<div class="project-content">
-				<p>{{projects.background_info}}</p>
-				<p>{{projects.your_story}}</p>
+				<div class="blurb"><p>{{projects.background_info|wpautop}}</p></div>
+
+				<ul class="project-examples">
+					{% for image in projects.get_field('examples') %}
+						<li><a href="{{image.example}}" data-lightbox="gallery" data-title="{{image.description}}"> <img src="{{image.example}}"> </a></li>
+					{% endfor %}
+				</ul>
+
+				<p>{{projects.your_story|wpautop}}</p>
 			</div>
+
 		</div>
 
 	</div>
 	{# row #}
 </div>
 {# container #}
-
-

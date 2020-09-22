@@ -9,19 +9,38 @@
 				color: $offwhite-red;
 		}
 	}
+	.bg-image {
+		box-shadow: 1px 1px 10px 1px $red;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 400px;
+		width: 100%;
+	}
+	.btn {
+		display: inline-block;
+		border: 3px solid $red;
+		border-radius: 30px;
+		padding: 5px;
+		width: 100%;
+		max-width: 200px;
+		margin: 10px 0 25px 0;
+		overflow: hidden;
+		&:hover {
+			color: $red;
+			background-color: $offwhite-red;
+			cursor: pointer;
+		}
+	}
 	.project-divider {
-		width: 50px;
+		width: 100px;
 		height: 5px;
 		margin: 0 auto;
 		background-color: $red;
 	}
-	.bg-image {
-		border: 10px solid $offwhite-red;
-		background-position: left top;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 50vh;
-		width: 100%;
+	.blurb {
+		box-shadow: 1px 1px 5px 1px $offwhite-red;
+		padding: 12px 0;
 	}
 }
 
@@ -36,19 +55,38 @@
 			color: $light_purple;
 		}
 	}
+	.bg-image {
+		box-shadow: 1px 1px 10px 1px $purple;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 400px;
+		width: 100%;
+	}
+	.btn {
+		display: inline-block;
+		border: 3px solid $purple;
+		border-radius: 30px;
+		padding: 5px;
+		width: 100%;
+		max-width: 200px;
+		margin: 10px 0 25px 0;
+		overflow: hidden;
+		&:hover {
+			color: $red;
+			background-color: $light_purple;
+			cursor: pointer;
+		}
+	}
 	.project-divider {
-		width: 50px;
+		width: 100px;
 		height: 5px;
 		margin: 0 auto;
 		background-color: $purple;
 	}
-	.bg-image {
-		border: 10px solid $light_purple;
-		background-position: left top;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 50vh;
-		width: 100%;
+	.blurb {
+		box-shadow: 1px 1px 5px 1px $light_purple;
+		padding: 12px 0;
 	}
 }
 
@@ -60,9 +98,19 @@
 .project-content {
 	p {
 		font-size: 18px;
+		padding: 0 5%;
 	}
 }
 
 .header-wrapper {
 	padding: 25px 0;
+}
+
+.project-examples {
+	display: flex;
+	justify-content: space-between;
+	li {
+		display: block;
+		padding-top: 50px;
+	}
 }

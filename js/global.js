@@ -10,3 +10,9 @@ new WOW().init();
 
 
 })(jQuery);
+
+// Lightbox
+
+lightbox.option ({
+  'showImageNumberLabel': false,
+})
