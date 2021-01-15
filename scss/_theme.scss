@@ -2,12 +2,21 @@
     Global theme styling
 */
 
-.about-img {
-    border: 12px solid $light_gray;
-    border-radius: 50%;
-    max-width: 75% !important;
-}
+// .about-img {
+//     border: 12px solid $light_gray;
+//     border-radius: 50%;
+//     max-width: 75% !important;
+// }
 
 .skill-icon {
     max-width: 100px !important;
+    color: $dark_gray !important;
+}
+
+.contact-icon img {
+    background-color: #fff;
+    max-width: 100px !important;
+    max-height: 100px !important;
+    border: 1px solid $light_gray;
+    padding: 20px;
 }

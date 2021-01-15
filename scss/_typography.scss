@@ -1,4 +1,22 @@
-.header-gray h2 {
+.headerz {
+    color: $dark_gray !important;
+    position: relative;
+    display: inline-block;
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 12px;
+        background-color: $dark-pink;
+        position: absolute;
+        padding: 0 10px;
+        bottom: 10px;
+        left: -10px;
+        z-index: -1;
+    }
+}
+
+h4 {
     color: $dark_gray !important;
 }
 
