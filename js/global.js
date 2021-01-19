@@ -5,8 +5,11 @@ new WOW().init();
 (function($) {
 
   $('.blog-recent').isotope({
-    itemSelector: '.type-post',
+    itemSelector: '.col',
+    layoutMode: 'fitRows'
   });
+  
+  $('.blog-recent').isotope({filter: ''});
 
   $('.project-filter').on( 'click', 'button', function() {
     var filterValue = $( this ).attr('filter');
