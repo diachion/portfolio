@@ -11,11 +11,12 @@ new WOW().init();
   
   $('.blog-recent').isotope({filter: ''});
 
-  $('.project-filter').on( 'click', 'button', function() {
+  $('.project-filter').on( 'click', 'button', function(){
     var filterValue = $( this ).attr('filter');
-    // use filterFn if matches value
-    // filterValue = filterFns[ filterValue ] || filterValue;
     $('.blog-recent').isotope({ filter: filterValue });
+
+    $(this).addClass('selected');
+    $(this).siblings().removeClass('selected');
   });
 
 

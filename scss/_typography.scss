@@ -20,6 +20,24 @@ h3, h4 {
     color: $dark_gray !important;
 }
 
+.h1-sub {
+    font-family: Muli;
+    font-size: 28px;
+    line-height: 36px;
+}
+
+.tagline-bracket {
+    font-size: 44px;
+    color: $tan;
+    line-height: 40px;
+}
+
+.tagline-text {
+    font-size: 32px;
+    color: $dark_gray;
+    line-height: 40px;
+}
+
 p {
     color: $black !important;
 }

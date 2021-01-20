@@ -21,17 +21,6 @@
     padding: 20px;
 }
 
-.project-filter {
-    .col {
-        width: calc(33.33% - 30px) !important;
-        margin-right: 10px !important;
-        margin-bottom: 10px !important;
-    }
-    .article-content-wrap {
-        display: none !important;
-    }
-}
-
 // Posts
 body.single-post.material[data-bg-header="true"] .container-wrap {
     padding-top: 0 !important;
@@ -54,4 +43,50 @@ body.single-post.material[data-bg-header="true"] .container-wrap {
 
 .single-post .bottom-meta,.single-post .comments-section {
     display: none !important;
+}
+
+//Isotope Filter
+.project-filter {
+    .col {
+        width: calc(33.33% - 30px) !important;
+        margin-right: 20px !important;
+        margin-bottom: 20px !important;
+    }
+    .article-content-wrap {
+        display: none !important;
+    }
+    .filter {
+        font-family: Muli;
+        font-size: 16px;
+        color: #FFF;
+        border: 1px solid $dark-pink;
+        border-radius: 0 !important;
+        background-color: $dark-pink;
+        padding: 8px;
+        margin: 0 5px;
+        cursor: pointer;
+        &:hover {
+            color: $dark-pink;
+            background-color: #FFF;
+        }
+    }
+    .selected {
+        color: $dark-pink;
+        background-color: #FFF;
+    }
+}
+
+.type-post {
+    .meta-category > a {
+        display: none !important;
+    }
+    .entire-meta-link {
+        border: 1px solid $light_gray;
+        box-shadow: none;
+    }
+}
+
+.blog-recent[data-style*="classic_enhanced"] .inner-wrap {
+    border-radius: 0;
+    box-shadow: 0 0;
 }
