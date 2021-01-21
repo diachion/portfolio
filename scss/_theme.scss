@@ -48,9 +48,47 @@ body.single-post.material[data-bg-header="true"] .container-wrap {
 //Isotope Filter
 .project-filter {
     .col {
-        width: calc(33.33% - 30px) !important;
-        margin-right: 20px !important;
-        margin-bottom: 20px !important;
+        width: 33.33% !important;
+        margin-right: 0% !important;
+        margin-bottom: 0% !important;
+        @include size(tablet) {
+            width: 50% !important;
+        }
+        .inner-wrap {
+            position: relative;
+            border: 1px solid $light_gray;
+            margin: 10px;
+            transition: $easyease !important;
+            &::after {
+                content: 'VIEW PROJECT';
+                display: flex;
+                width: 100%;
+                height: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                background-color: $dark-pink;
+                color: #FFF;
+                font-size: 16px;
+                align-items: center;
+                align-content: center;
+                z-index: 69;
+                visibility: initial;
+                justify-content: center;
+                opacity: 0;
+                transition: $easyease !important;
+            }
+        }
+        &:hover {
+            .inner-wrap {
+                border: 1px solid $dark-pink;
+                &::after {
+                    opacity: 1;
+                    height: 100%;
+                }
+            }
+        }
     }
     .article-content-wrap {
         display: none !important;
@@ -81,8 +119,10 @@ body.single-post.material[data-bg-header="true"] .container-wrap {
         display: none !important;
     }
     .entire-meta-link {
-        border: 1px solid $light_gray;
         box-shadow: none;
+    }
+    img {
+        transform: none !important;
     }
 }
 
