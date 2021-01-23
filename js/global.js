@@ -3,26 +3,32 @@ new WOW().init();
 
 /* Functions */
 (function($) {
+  (function($) { // Tell wordpress that everything in here is going to use Jquery
+    $(document).ready(function(){
+        // Initiate Isotope
+        $('.blog-recent').isotope({
+            itemSelector: '.col',
+            layoutMode: 'fitRows'
+        });
+        // Bind the click event
+        $('.project-filter button').on( 'click',function(){
+            var filterValue = $( this ).attr('filter');
+            $('.blog-recent').isotope({ filter: filterValue });
 
-  $('.blog-recent').isotope({
-    itemSelector: '.col',
-    layoutMode: 'fitRows'
-  });
-  
-  $('.blog-recent').isotope({filter: ''});
+            $(this).addClass('selected');
+            $(this).siblings().removeClass('selected');
 
-  $('.project-filter').on( 'click', 'button', function(){
-    var filterValue = $( this ).attr('filter');
-    $('.blog-recent').isotope({ filter: filterValue });
+            console.log('hi');
+        });
+        // Run as soon as all the images finish loading
+        $(window).load(function(){
+            $('.blog-recent').isotope({filter: ''});
+        });
+    }); // Document.ready
+});
+});
 
-    $(this).addClass('selected');
-    $(this).siblings().removeClass('selected');
-  });
-
-
-
-
-})(jQuery);
+(jQuery);
 
 // Lightbox
 

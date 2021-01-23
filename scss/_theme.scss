@@ -52,7 +52,7 @@ body.single-post.material[data-bg-header="true"] .container-wrap {
         margin-right: 0% !important;
         margin-bottom: 0% !important;
         @include size(tablet) {
-            width: 50% !important;
+            width: calc(50% - 1px) !important;
         }
         .inner-wrap {
             position: relative;
@@ -102,6 +102,12 @@ body.single-post.material[data-bg-header="true"] .container-wrap {
         background-color: $dark-pink;
         padding: 8px;
         margin: 0 5px;
+        @include size(phone) {
+            font-size: 14px;
+            padding: 6px;
+            display: block;
+            margin: 10px auto;
+        }
         cursor: pointer;
         &:hover {
             color: $dark-pink;
