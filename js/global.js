@@ -22,7 +22,9 @@ new WOW().init();
     });
 
 
-})(jQuery);
+})
+
+(jQuery);
 
 // Lightbox
 
